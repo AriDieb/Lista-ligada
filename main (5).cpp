@@ -1,6 +1,6 @@
 /**************************
-Criar lista ligada com 3 nC3s
-por Ariadne FalcC#o
+Criar lista ligada com 3 nós
+por Ariadne Falcão
 2026-01-28
 ************************/
 #include <iostream>
@@ -108,13 +108,13 @@ void inserirAoMeio()
    atual = (*CABECA).proximo; // variavel temp, toma conta do proximo nó
    while (atual != NULL) // enquanto o proximo nó não for (enquanto não acabamos de procorrer a lista)
    {
-       if ((*novo).numero > (*anterior).numero && (*novo).numero < (*atual).numero) // se o novo nC3 tem um valor maior que o atual emenor que o proximo nC3, inserimos
+       if ((*novo).numero > (*anterior).numero && (*novo).numero < (*atual).numero) // se o novo nó tem um valor maior que o atual e menor que o proximo nó, inserimos
        {
            (*novo).proximo = atual;
            (*anterior).proximo = novo;
            break;
        }
-       else if ((*novo).numero > (*anterior).numero && (*novo).numero > (*atual).numero) // se o novo nC3 tem um valor maior que o atual e o proximo, continuamos procorrer a lista
+       else if ((*novo).numero > (*anterior).numero && (*novo).numero > (*atual).numero) // se o novo nó tem um valor maior que o atual e o proximo, continuamos procorrer a lista
        {
            anterior = atual;
            atual = (*atual).proximo;
@@ -482,4 +482,5 @@ int main()
            
        }
    } while (op != '0');
+
 }
